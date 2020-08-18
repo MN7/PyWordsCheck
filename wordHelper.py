@@ -1,3 +1,5 @@
+# Easily executed online at: https://repl.it/languages/python3
+
 import enchant
 
 def rec(inpar):
