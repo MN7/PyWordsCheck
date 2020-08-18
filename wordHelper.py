@@ -29,7 +29,7 @@ for tgtlen in tgtlens:
   print("\n\n\t LENGTH: ",tgtlen,"\n")
   idx=len(s)-tgtlen
   lwords = []
-  [lwords.append(w[idx:]) for w in words if d.check(w[idx:])]
+  [lwords.append(w[idx:]) for w in words if d.check(w[idx:]) and w[idx:] not in lwords]
   print("\n".join(lwords))
 
 spl = [w for w in words if w[3]=="S" and d.check(w) ]
