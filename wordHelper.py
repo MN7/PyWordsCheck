@@ -15,7 +15,7 @@ def rec(inpar):
     return res
 
 print("\n\n\n\t\tMain Program Start\n\t\t^^^^ ^^^^^^ ^^^^^")
-s="BRING"
+s="FOUND"
 d = enchant.Dict("en_US")
 words=rec([c for c in s])
 dwords = []
