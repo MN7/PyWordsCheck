@@ -21,6 +21,7 @@ words=rec([c for c in s])
 dwords = []
 [ dwords.append(w) for w in words if d.check(w) and w not in dwords]
 print("\n\n\t DICT-Checked: \n")
+dwords.sort()
 print("\n".join(dwords))
 
 
@@ -30,6 +31,7 @@ for tgtlen in tgtlens:
   idx=len(s)-tgtlen
   lwords = []
   [lwords.append(w[idx:]) for w in words if d.check(w[idx:]) and w[idx:] not in lwords]
+  lwords.sort()
   print("\n".join(lwords))
 
 spl = [w for w in words if w[3]=="S" and d.check(w) ]
