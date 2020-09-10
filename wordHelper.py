@@ -37,4 +37,4 @@ for tgtlen in tgtlens:
 
 spl = [w for w in tgtwords if w[0]=="P" and d.check(w) ]
 print("\n\n\t SPL: \n")
-print("\n".join(spl))
+if len(spl): print("\n".join(spl))
