@@ -15,7 +15,7 @@ def rec(inpar):
     return res
 
 print("\n\n\n\t\tMain Program Start\n\t\t^^^^ ^^^^^^ ^^^^^")
-s="FOUND"
+s="FFACET"
 d = enchant.Dict("en_US")
 words=rec([c for c in s])
 dwords = []
@@ -24,16 +24,17 @@ print("\n\n\t DICT-Checked: \n")
 dwords.sort()
 print("\n".join(dwords))
 
-
-tgtlens=[3,4]
+tgtwords=[]
+tgtlens=[3,4,5,6]
 for tgtlen in tgtlens: 
   print("\n\n\t LENGTH: ",tgtlen,"\n")
   idx=len(s)-tgtlen
   lwords = []
   [lwords.append(w[idx:]) for w in words if d.check(w[idx:]) and w[idx:] not in lwords]
   lwords.sort()
+  tgtwords.extend(lwords)
   print("\n".join(lwords))
 
-spl = [w for w in words if w[3]=="S" and d.check(w) ]
+spl = [w for w in tgtwords if w[0]=="P" and d.check(w) ]
 print("\n\n\t SPL: \n")
 print("\n".join(spl))
